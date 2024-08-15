@@ -1,5 +1,8 @@
 # Project Dashboard
 
+## Web URL
+![View the Website](screenshots/dashboard.png)
+
 ## Overview
 
 This project is a simple dashboard built using HTML, CSS, and JavaScript. It includes a table section and interactive buttons designed to showcase basic web design and functionality.
