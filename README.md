@@ -1,7 +1,7 @@
 # Project Dashboard
 
 ## Web URL
-![View the Website](screenshots/dashboard.png)
+![View the Website](https://sreyas-sc.github.io/e-dashboard/)
 
 ## Overview
 
