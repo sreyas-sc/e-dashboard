@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Container for the entire layout -->
+    <div id="layout">
+        <div class="side-navBar" id="sideNavBar">
+            <!-- NavBar-Container -->
+            <div class="nav-bar-container">
+                <div class="navBar-heading">
+                    <div class="navBar-brand">
+                        <img src="./assets/icons/e-dashboard-icon.svg" width="26" height="26" alt="Brand-Logo">
+                        <p>E-Dashboard</p>
+                    </div>
+                    <img src="./assets/icons/collapse-hamburger-icon.svg" alt="Menu Open Icon" class="menu-icon" width="24" height="24" id="menuToggle">
+                </div>
+
+                <div class="company-info-container">
+                    <div>
+                        <div class="drop-down">
+                            <div class="avatar-icon">A</div> <!-- Added avatar -->
+                            <span>Alphalinx inc.</span>
+                            <img src="./assets/icons/down-arrow.svg" alt="expand_more-Icon" class="expand-more pointer" width="24" height="24">
+                        </div>
+                        <ul class="drop-down-option">
+                            <li><img src="./Icon/company.svg" alt="company-icon" width="32" height="32">Alphalinx inc.</li>
+                            <li><img src="./Icon/company.svg" alt="company-icon" width="32" height="32">Alphalinx PVT.</li>
+                            <li><img src="./Icon/company.svg" alt="company-icon" width="32" height="32">Alphalinx EU</li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-menu">
+                        <a href="#" class="nav-link-items">
+                            <img src="./assets/icons/dashboard-button-icon.svg" alt="">
+                            DashBoard
+                        </a>
+                        <a href="#"  class="nav-link-items">
+                            <img src="./assets/icons/my-business-icon.svg" alt="My Business">My Business
+                        </a>
+                        <a href="#"  class="nav-link-items">
+                            <img src="./assets/icons/financial-resources-icon.svg" alt="Finacial Resources">Finacial Resources
+                        </a>
+                        <a href="#"  class="nav-link-items">
+                            <img src="./assets/icons/mail-box-icon.svg" alt="Mailbox">Mailbox
+                        </a>
+                        <a href="#"  class="nav-link-items">
+                            <img src="./assets/icons/visa-center-icon.svg" alt="Visa-Center">Visa-Center
+                        </a>
+                        <a href="#"  class="nav-link-items">
+                            <img src="./assets/icons/compliance-icon.svg" alt="Complainces">Complainces <span id="complainceNumber">02</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logout Option-Container -->
+            <div class="notification-logout-option">
+                <a href="#"><img src="./assets/icons/notifications-bell-icon.svg" width="24" height="24" alt="Notification-Icon">Notification-Icon</a>
+                <a href="#" class="three-dots"><img src="./assets/icons/help-center-icon.svg" width="24" height="24" alt="Help Center">Help Center</a>
+                <a href="#" class="three-dots">
+                    <div class="avatar-icon">J</div> 
+                    <p>
+                        <span>Jacobe James</span>
+                        
+                        <span>Jacobejames@gmail.com</span>
+                    </p>
+                </a>
+            </div>                
+        </div>
+
+        <!-- DashBoard Settings -->
+        <div class="dashboard">
+            <div class="welcoming-quote">
+                <h2>Good morning, <span>Emily! &nbsp;👋</span></h2>
+                <p>Welcome back!</p>
+            </div>
+
+            <div class="document-status-container">
+                <img src="./assets/icons/upto-date-documents-icon.svg" alt="Card-Checked" class="card-checked">
+                <h2>All your <span class="documents-span1">documents</span> are <span class="documents-span2">up to date!</span></h2>
+                <!-- Horizontal Line -->
+                <span class="horizontal-line"></span>
+                <p>
+                    You have 3 upcoming document updates in January.
+                    <button class="next-button">
+                        <span class="arrow">&gt;</span>
+                    </button>
+                </p>
+                <img src="./assets/icons/stars-icon.svg" alt="Stars Icon" class="stars-icon">
+            </div>               
+
+            <!-- The pie chart card section -->
+            <div class="gradient-rectangle-2">
+                <div class="doughnut-chart-container">
+                    <canvas id="doughnutChart"></canvas>
+                    <div id="doughnut-chart-text">Applications</div>
+                </div>
+                <ul class="application-status">
+                    <li class="application-status-content">
+                        <span class="color-indicator" style="background-color: #FFA500;"></span> Incomplete
+                    </li>
+                    <li class="application-status-content">
+                        <span class="color-indicator" style="background-color: #FF6347;"></span> Pending approval
+                    </li>
+                    <li class="application-status-content">
+                        <span class="color-indicator" style="background-color: #32CD32;"></span> Approved
+                    </li>
+                </ul>
+            </div>
+            <!-- The pie chart card section ends here -->
+            
+            <!-- The mail-box section starts here -->
+            <div class="mail-box">
+                <div class="mail-box-header">
+                    <p class="mail-box-heading">Mailbox</p>
+                    <a href="#">View all</a>
+                </div>
+                <span>Check on your all your mail in one go.</span>
+                <div class="mail-box-footer">
+                    <div class="mail-box-item">
+                        <div class="mail-box-icon new-icon">
+                            <img src="./assets/icons/mail-box-new-icon.svg" alt="New Mail Icon">
+                        </div>
+                        <div class="mail-box-details">
+                            <p>New</p>
+                            <p>23</p>
+                        </div>
+                    </div>
+                    <div class="mail-box-item">
+                        <div class="mail-box-icon requested-icon">
+                            <img src="./assets/icons/mail-box-requested-icons.svg" alt="Requested Mail Icon">
+                        </div>
+                        <div class="mail-box-details">
+                            <p>Requested</p>
+                            <p>23</p>
+                        </div>
+                    </div>
+                    <div class="mail-box-item">
+                        <div class="mail-box-icon actions-icon">
+                            <img src="./assets/icons/mail-box-actions-taken.svg" alt="Actions Taken Icon">
+                        </div>
+                        <div class="mail-box-details">
+                            <p>Actions taken</p>
+                            <p>23</p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <!-- The mail box section ends here -->
+
+
+            <!-- legal compliances section starts here -->
+             <!-- The mail-box section starts here -->
+            <div class="legal-complainces">
+                <div class="legal-complainces-header">
+                    <p class="legal-complainces-heading">Legal compliance</p>
+                    <a href="#">View all</a>
+                </div>
+                <span>Keep your requirements up to date.</span>
+                <div class="legal-complainces-footer">
+                    <div class="legal-complainces-item">
+                        <div class="legal-complainces-icon new-icon">
+                            <img src="./assets/icons/mail-box-new-icon.svg" alt="New Mail Icon">
+                        </div>
+                        <div class="legal-complainces-details">
+                            <p>Reminders</p>
+                            <p>23</p>
+                        </div>
+                    </div>
+                    <div class="legal-complainces-item">
+                        <div class="legal-complainces-icon requested-icon">
+                            <img src="./assets/icons/mail-box-requested-icons.svg" alt="Requested Mail Icon">
+                        </div>
+                        <div class="legal-complainces-details">
+                            <p>In progress</p>
+                            <p>23</p>
+                        </div>
+                    </div>
+                    <div class="legal-complainces-item">
+                        <div class="legal-complainces-icon actions-icon">
+                            <img src="./assets/icons/mail-box-actions-taken.svg" alt="Actions Taken Icon">
+                        </div>
+                        <div class="legal-complainces-details">
+                            <p>To approve</p>
+                            <p>23</p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <!-- The mail box section ends here -->
+             <!-- legal complainces section ends here -->
+        </div>
+
+
+
+        <div class="task-container">
+            <!-- Additional content goes here -->
+        </div>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        const ctx = document.getElementById('doughnutChart').getContext('2d');
+        const doughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Incomplete', 'Pending approval', 'Approved'],
+                datasets: [{
+                    data: [5, 3, 13], // Replace with dynamic values
+                    backgroundColor: ['#FFA500', '#FF6347', '#32CD32'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Function to update chart data
+        function updateChart(incomplete, pending, approved) {
+            doughnutChart.data.datasets[0].data = [incomplete, pending, approved];
+            doughnutChart.update();
+        }
+
+        // Example: Update chart with new data
+        updateChart(7, 5, 9);
+    </script>
+</body>
+</html>
