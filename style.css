@@ -622,6 +622,9 @@ h2 {
 .tasks-table, .payment-history-table {
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid #E5E9FF;
+    border-radius: 10px;
+    
 }
 
 .tasks-table td, .payment-history-table td{
@@ -631,9 +634,9 @@ h2 {
     font-weight: 400;
     line-height: 19.6px;
     text-align: left;
-    width: 148px;
-    height: 40px;
-    padding-top: 23px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
     /* left: 776px; */
     gap: 0px;
     opacity: 0px;        
@@ -646,33 +649,38 @@ h2 {
     font-weight: 500;
     line-height: 15.6px;
     text-align: left;
-    width: 27px;
-    height: 16px;
-    top: 145px;
-    left: 776px;
     gap: 0px;
     opacity: 0px;
+    background-color: #F8F9FC;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 /* Add line after each row except the last one */
 .tasks-table tbody tr:not(:last-child), 
 .payment-history-table tbody tr:not(:last-child) {
     border-bottom: 1px solid #E5E9FF;
+    padding: 0 10px;
 }
-
 .status-button {
     padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #d9d9d9;
+    border: 1px solid #CECED1;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 12px;
+    text-wrap: nowrap;
+    color: #6A6A6D;
+    background: #F1F1F5;
+    width: 100px; /* Set a fixed width */
+    height: 24px; /* Fixed height to ensure uniformity */
+    display: flex; /* Use flex to handle content alignment */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    border: 1px solid #CECED1; /* Ensure border is applied */
+    opacity: 1; /* Set opacity to fully visible */
 }
 
-.status-button.pending {
-    background-color: #f39c12;
-    color: white;
-}
+
 
 .status-button:hover {
     opacity: 0.8;
