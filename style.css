@@ -24,9 +24,8 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    flex: 1 1 18.3rem;
+    flex: 1 0 18.3rem;
     /* width: 100%; */
-    max-width:  fit-content;
     /* border: green 1px solid; */
     background-color: var(--navbar-BackgrounColor);
     padding-inline: 1.1rem;
@@ -454,15 +453,6 @@
     margin-bottom: 5px;
 }
 
-.new-icon {
-}
-
-.requested-icon {
-    /* background-color: #2C3E50; Color for 'Requested' icon */
-}
-
-.actions-icon {
-}
 
 .mail-box-details p {
     color: #1E1F21;
@@ -542,15 +532,6 @@
     margin-bottom: 5px;
 }
 
-.new-icon {
-}
-
-.requested-icon {
-    /* background-color: #2C3E50; Color for 'Requested' icon */
-}
-
-.actions-icon {
-}
 
 .legal-complainces-details p {
     color: #1E1F21;
@@ -682,6 +663,7 @@ h2 {
 
 
 
+
 .status-button:hover {
     opacity: 0.8;
 }
@@ -694,8 +676,9 @@ h2 {
 
      /* Side NavBar Desigin */
     .side-navBar{
+        flex: 1;
     width: 100%;
-    flex: 1;
+    /* flex: 1; */
      }
 
      .dashboard{
@@ -705,6 +688,9 @@ h2 {
         padding:1rem 1rem;
         background-color: rgba(248, 249, 255, 1);
     }
+
+
+    /* Table css for 1st table*/
     .notification-logout-option{
         display: none;
         position: absolute;
@@ -712,5 +698,154 @@ h2 {
     .company-info-container{
         display: none;
         position: absolute;
+    }
+    /* #task td:nth-of-type(1)::before{
+        /* content:'task  ' ; */
+    
+    /* } */
+
+    /* #task th:nth-of-type(1){
+        content: none;
+    } */
+
+    .task-container{
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+
+    /* this helps to view the table content in the same cell*/
+    /* #task td{
+        display: block;
+    } */
+   /* Targeting the task row */
+
+
+   /* Tasks table responsiveness */
+#task tr {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: none; */
+}
+
+/* Adding custom content for each table cell */
+#task td:nth-of-type(1)::before {
+    font-weight: bold;
+}
+
+#task td:nth-of-type(2)::before {
+    content: 'Category: ';
+}
+
+#task td:nth-of-type(3)::before {
+    content: 'Due Date: ';
+}
+
+#task td:nth-of-type(4)::before {
+    content: 'Status: ';
+}
+
+/* Styling the table cells */
+#task td {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Hide table header in mobile view */
+#task th {
+    display: none;
+}
+
+/* Set maximum width for the first table cell */
+#task td:nth-of-type(1) {
+    max-width: 20rem;
+    font-weight: bold; /* Make the content of the first cell bold */
+}
+
+
+/* Payment history table responsiveness */
+/* Payment history table responsiveness */
+#payment thead {
+    display: none;
+}
+
+#payment tbody, #payment tr {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+#payment td {
+    padding: 8px 0;
+    position: relative;
+    text-align: left;
+    display: block;
+}
+
+#payment tr td[data-label="Amount"],
+#payment tr td[data-label="Transaction ID"] {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#payment tr td:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#payment tr {
+    position: relative;
+}
+
+/* Position the amount cell */
+#payment td[data-label="Amount"] {
+    position: absolute;
+    right: 4%;
+    top: 8%;
+}
+
+/* Hide description by default */
+#payment tr td[data-label="Description"] {
+    display: none;
+}
+
+/* Show description when the row is expanded */
+#payment tr.expanded td[data-label="Description"] {
+    display: block;
+}
+
+/* Add arrow to the amount cell */
+#payment td[data-label="Amount"]::after {
+    content: '▼'; /* Default down arrow */
+    position: absolute;
+    top: 28%;
+    margin-left: 4px;
+}
+
+/* Change arrow direction when expanded */
+#payment tr.expanded td[data-label="Amount"]::after {
+    content: '▲'; /* Up arrow when expanded */
+}
+
+
+
+    /* Table css for 1st table*/
+    .mail-box-header{
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .legal-complainces-header{
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        /* align-items: center; */
+        
     }
 }
