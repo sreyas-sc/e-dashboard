@@ -24,7 +24,9 @@ Below are screenshots of the dashboard to illustrate its design and functionalit
 
 ### Dashboard Mobile View
 
-![Dashboard Screenshot](screenshots/dashboard.png)
+![Dashboard Screenshot](Phone1.png)
+![Dashboard Screenshot](Phone2.png)
+![Dashboard Screenshot](Phone3.png)
 
 ## Acknowledgements
 
