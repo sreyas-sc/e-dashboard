@@ -211,7 +211,8 @@
             <button>Overdue</button>
             <button>Assigned by me</button>
         </div>
-        <table class="tasks-table">
+        <!-- <hr> -->
+        <table class="tasks-table" id="task">
             <thead>
                 <tr>
                     <th>Task</th>
@@ -252,57 +253,53 @@
     <!-- Payment History Section -->
     <div class="payment-history-section">
         <div class="payment-history-header">
-            <h2>Payment history</h2>
+            <h2>Transaction history</h2>
             <a href="#">View all</a>
         </div>
-        <table class="payment-history-table">
+
+        <table class="payment-history-table" id="payment">
             <thead>
-                <tr>
-                    <th>Transaction ID</th>
-                    <th>Date of transaction</th>
-                    <th>Amount</th>
-                    <th>Description</th>
-                </tr>
+              <tr>
+                <th>Transaction ID</th>
+                <th>Date of transaction</th>
+                <th>Amount</th>
+                <th>Description</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>#764657758</td>
-                    <td>23/01/19</td>
-                    <td>$5.99</td>
-                    <td>Mailbox</td>
-                </tr>
-                <tr>
-                    <td>#764657758</td>
-                    <td>22/01/19</td>
-                    <td>$99</td>
-                    <td>Registration (upgrade)</td>
-                </tr>
-                <tr>
-                    <td>#764657758</td>
-                    <td>21/01/19</td>
-                    <td>$5.99</td>
-                    <td>Mailbox</td>
-                </tr>
-                <tr>
-                    <td>#764657758</td>
-                    <td>19/01/19</td>
-                    <td>$5.99</td>
-                    <td>Mailbox</td>
-                </tr>
-                <tr>
-                    <td>#764657758</td>
-                    <td>09/01/19</td>
-                    <td>$5.99</td>
-                    <td>Mailbox</td>
-                </tr>
-                <tr>
-                    <td>#764657758</td>
-                    <td>23/12/18</td>
-                    <td>$5.99</td>
-                    <td>Mailbox</td>
-                </tr>
+              <tr>
+                <td data-label="Transaction ID">#764657758</td>
+                <td data-label="Date">23/01/19</td>
+                <td data-label="Amount">$5.99</td>
+                <td data-label="Description">Mailbox</td>
+              </tr>
+              <tr>
+                <td data-label="Transaction ID">#764657758</td>
+                <td data-label="Date">22/01/19</td>
+                <td data-label="Amount">$99</td>
+                <td data-label="Description">Registration (upgrade)</td>
+              </tr>
+              <tr>
+                <td data-label="Transaction ID">#764657758</td>
+                <td data-label="Date">19/01/19</td>
+                <td data-label="Amount">$5.99</td>
+                <td data-label="Description">Description Mailbox</td>
+              </tr>
+              <tr>
+                <td data-label="Transaction ID">#764657758</td>
+                <td data-label="Date">09/01/19</td>
+                <td data-label="Amount">$5.99</td>
+                <td data-label="Description">Description Mailbox</td>
+              </tr>
+              <tr>
+                <td data-label="Transaction ID">#764657758</td>
+                <td data-label="Date">23/12/18</td>
+                <td data-label="Amount">$5.99</td>
+                <td data-label="Description">Description Mailbox</td>
+              </tr>
             </tbody>
-        </table>
+          </table>
+          
     </div>
 
         </div>
@@ -343,6 +340,25 @@
 
         // Example: Update chart with new data
         updateChart(7, 5, 9);
+
+
+
+document.querySelectorAll('#payment tr td[data-label="Amount"]').forEach(function(amountCell) {
+    amountCell.addEventListener('click', function() {
+        // Toggle expanded class on the row (parent <tr>)
+        const row = this.closest('tr');
+        row.classList.toggle('expanded');
+        
+        // Change the arrow direction based on the expanded state
+        if (row.classList.contains('expanded')) {
+            this.querySelector('::after').content = '▲';
+        } else {
+            this.querySelector('::after').content = '▼';
+        }
+    });
+});
+
+
     </script>
 </body>
 </html>
