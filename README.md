@@ -19,7 +19,7 @@ Below are screenshots of the dashboard to illustrate its design and functionalit
 
 ### Dashboard Desktop View
 
-![Dashboard Screenshot](Desktop-Dashboard.png)
+![Dashboard Screenshot](Desktop.png)
 
 
 ### Dashboard Mobile View
