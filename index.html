@@ -24,7 +24,7 @@
                     <div>
                         <div class="drop-down">
                             <div class="avatar-icon">A</div> <!-- Added avatar -->
-                            <span>Alphalinx inc.</span>
+                            <span id="user-name">Alphalinx inc.</span>
                             <img src="./assets/icons/down-arrow.svg" alt="expand_more-Icon" class="expand-more pointer" width="24" height="24">
                         </div>
                         <ul class="drop-down-option">
@@ -36,25 +36,48 @@
 
                     <div class="nav-menu">
                         <a href="#" class="nav-link-items">
-                            <img src="./assets/icons/dashboard-button-icon.svg" alt="">
-                            DashBoard
+                            <img src="./assets/icons/dashboard-button-icon.svg" alt="Dashboard Icon">
+                            Dashboard
                         </a>
-                        <a href="#"  class="nav-link-items">
-                            <img src="./assets/icons/my-business-icon.svg" alt="My Business">My Business
+                    
+                        <div class="nav-dropdown">
+                            <a href="#" class="nav-link-items dropdown-toggle">
+                                <img src="./assets/icons/my-business-icon.svg" alt="My Business Icon">
+                                My Business <img src="./assets/icons/down-arrow-white.svg" alt="">
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="#">Sub-item 1</a>
+                                <a href="#">Sub-item 2</a>
+                            </div>
+                        </div>
+                    
+                        <div class="nav-dropdown">
+                            <a href="#" class="nav-link-items dropdown-toggle">
+                                <img src="./assets/icons/financial-resources-icon.svg" alt="Financial Resources Icon">
+                                Financial Resources <img src="./assets/icons/down-arrow-white.svg" alt="">
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="#">Sub-item 1</a>
+                                <a href="#">Sub-item 2</a>
+                            </div>
+                        </div>
+                    
+                        <a href="#" class="nav-link-items">
+                            <img src="./assets/icons/mail-box-icon.svg" alt="Mailbox Icon">
+                            Mailbox
                         </a>
-                        <a href="#"  class="nav-link-items">
-                            <img src="./assets/icons/financial-resources-icon.svg" alt="Finacial Resources">Finacial Resources
+                    
+                        <a href="#" class="nav-link-items">
+                            <img src="./assets/icons/visa-center-icon.svg" alt="Visa-Center Icon">
+                            Visa-Center
                         </a>
-                        <a href="#"  class="nav-link-items">
-                            <img src="./assets/icons/mail-box-icon.svg" alt="Mailbox">Mailbox
+                    
+                        <a href="#" class="nav-link-items">
+                            <img src="./assets/icons/compliance-icon.svg" alt="Compliances Icon">
+                            Compliances <span id="complainceNumber">02</span>
                         </a>
-                        <a href="#"  class="nav-link-items">
-                            <img src="./assets/icons/visa-center-icon.svg" alt="Visa-Center">Visa-Center
-                        </a>
-                        <a href="#"  class="nav-link-items">
-                            <img src="./assets/icons/compliance-icon.svg" alt="Complainces">Complainces <span id="complainceNumber">02</span>
-                        </a>
-                    </div>
+                    </div>                    
+                    
                 </div>
             </div>
 
@@ -72,6 +95,12 @@
                 </a>
             </div>                
         </div>
+
+       
+            <div class="hamburger-open-menu" id="openmenu">
+                <img src="./assets/icons/hamburger-icon.svg" alt="">
+            </div>
+      
 
         <!-- DashBoard Settings -->
         <div class="dashboard">
@@ -356,6 +385,36 @@ document.querySelectorAll('#payment tr td[data-label="Amount"]').forEach(functio
             this.querySelector('::after').content = '▼';
         }
     });
+});
+
+
+// to toggle dropdown list
+
+document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(event) {
+        event.preventDefault();  // Prevent the default anchor behavior
+        // Toggle visibility of the dropdown content
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display = (dropdownContent.style.display === 'flex') ? 'none' : 'flex';
+    });
+});
+
+
+// collapse sidebar
+const menuToggle = document.getElementById('menuToggle');
+const sideNavBar = document.getElementById('sideNavBar');
+const openMenu = document.getElementById('openmenu');
+
+// Toggle sidebar visibility
+menuToggle.addEventListener('click', function() {
+    sideNavBar.style.display = 'none';  // Hide the sidebar
+    openMenu.style.display = 'block';   // Show the hamburger icon
+});
+
+// Add an event listener for the hamburger-open-menu to bring the sidebar back
+openMenu.addEventListener('click', function() {
+    sideNavBar.style.display = 'flex';  // Show the sidebar
+    openMenu.style.display = 'none';     // Hide the hamburger icon
 });
 
 
