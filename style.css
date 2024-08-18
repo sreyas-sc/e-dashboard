@@ -801,6 +801,15 @@ h2 {
         content: none;
     } */
 
+    .tasks-header, .payment-history-header {
+        display: flex;
+        /* gap:100px; */
+        justify-content: space-between;
+        /* align-content: space-between; */
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
     .task-container{
         max-width: 100%;
         overflow-x: auto;
